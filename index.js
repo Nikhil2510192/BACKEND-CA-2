@@ -11,7 +11,7 @@ app.get('/users',(req,res)=>{
     if(!req.query.user){
           return res.json({"message":"Usercannot be empty"})
     }
-    const user =users.find(u=>{u.username===req.query.user})
+    const user =users.find(u=>u.username===req.query.user)
     if(user){
         return  res.json({"message":"User found","data":user})
     }
